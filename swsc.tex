@@ -1,0 +1,271 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                                                
+%%      SWSC LaTeX class for Journal of Space Weather and Space Climate
+%%      
+%%                                      (c) Springer-Verlag HD
+%%                                      revised by EDP Sciences
+%%                                      further revised by J. Watermann 
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%      This demonstration file was derived from aa.dem
+%%  
+%%      AA vers. 7.0, LaTeX class for Astronomy & Astrophysics
+%%      demonstration file
+%%                                                (c) Springer-Verlag HD
+%%                                                revised by EDP Sciences
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%      modified for Journal of Space Weather and Space Climate
+%%      by Jurgen Watermann, Editorial Advisor to SWSC
+%%
+%%      01-04-2012 original version
+%%      02-04-2012 revision 1
+%%      12-07-2012 revision 2
+%%      06-12-2012 revision 3 
+%%      01-01-2014 revision 4
+%%      05-03-2016 revision 5
+%%      11-05-2018 revision 6  (equations and figure captions line numbered)
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%      The two sub-figures referenced in this template are of eps and png type,
+%%      respectively, in order to demonstrate the usepackages subfigure and
+%%      epstopdf and thus create pdf-only output 
+%%
+%%      If you want to use TexLive or MikTex together with a bibtex bibliography 
+%%      file you may run Latex2e from the command line 
+%%          pdflatex -shell-escape swsc.tex
+%%          bibtex swsc (do not include an extension such as .tex or .bib)
+%%          pdflatex -shell-escape swsc.tex
+%%          pdflatex -shell-escape swsc.tex
+%%
+%%      A double call to pdflatex after calling bibtex is necessary in order to
+%%      set citations and references correctly and insure that foreward/backward  
+%%      linkage (backref option) is properly applied
+%%      If you use MikTex you may need to make a triple call to pdflatex
+%%
+%%      If you are using TexLive or MikTex but not a bibtex type of bibliography
+%%      you may simply run Latex2e twice from the command line 
+%%          pdflatex -shell-escape swsc.tex
+%%          pdflatex -shell-escape swsc.tex
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%   single column 12-point version for review
+%%
+
+%%  with traditional abstract
+\documentclass[referee,a4paper,12pt,traditabstract]{swsc} 
+
+%%  with structured abstract 
+%\documentclass[referee,a4paper,12pt,structabstract]{swsc} 
+
+\usepackage{graphicx}
+\usepackage{txfonts}
+\usepackage{subfigure}
+\usepackage{epstopdf}
+\usepackage[displaymath,mathlines]{lineno}
+\usepackage[authoryear,round]{natbib}
+\usepackage[backref]{hyperref}
+\usepackage{url}
+
+%%    This version assumes using bibtex with the swsc bibliography style file
+\bibliographystyle{swsc}
+
+\hypersetup{colorlinks=true,citecolor=cyan,urlcolor=cyan,linkcolor=blue}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\begin{linenumbers}  
+
+   \title{Microbursts vs Curtains: Similarities and differences complicating identification and potential sources. }
+
+   \subtitle{Similarities and differences complicating identification and potential sources.}
+   
+   \titlerunning{Microbursts and Curtains}
+
+   \authorrunning{Halford et al. }
+
+   \author{A.J. Halford
+          \inst{1}
+          \and
+          T. P. O'Brien \inst{1}
+          	\and 
+	C. Lemon \inst{1} 
+	\and 
+	J.B. Blake \inst{1}
+	}
+          
+
+   \institute{The Aerospace Corporation, 14301 Sullyfield Circle, Unit C, Chantilly, VA 20151-1622 United States of America\\ 
+              \email{\href{mailto:alexa.j.halford@aero.org}{alexa.j.halford@aero.org}}  
+              }
+%         \and
+%             University of Alexandria, Department of Geography\\
+ %            \email{\href{mailto:c.ptolemy@hipparch.uheaven.space}{c.ptolemy@hipparch.uheaven.space}}
+  %           \thanks{The university of heaven temporarily does not
+   %                  accept e-mails}
+           
+
+%%   \date{Received September 15, 1996; accepted March 16, 1997}
+
+  % \abstract{}{}{}{}{}        %% uncomment if structured abstract is desired
+ %% 5 {} token are mandatory
+ 
+  \abstract
+ %% context heading (optional). leave {} empty if necessary  
+   {Need to add in an abstract once finished}        %% replace by pair of curly brackets, {}, if structured abstract is selected
+   
+
+   \keywords{Microbursts --
+                energetic electron precipitation --
+                radiation belt dynamics
+               }
+
+   \maketitle
+%%
+%%________________________________________________________________
+
+\section{Introduction}
+
+%%  This two-panel figure was inserted by JFW to demonstrate the subfigure and epstopdf packages
+
+%   \begin{figure}
+%   \centering
+%   \subfigure{\includegraphics[width=0.6\columnwidth]{jupiter_aurora_cassini.eps}}
+%   \vspace{12pt}
+%   \subfigure{\includegraphics[width=0.6\columnwidth]{saturn_aurora_hubble.png}}
+%   \begin{internallinenumbers}
+%   \caption{\small Colour maps of the two largest known gas planets in the solar system.
+%            Top panel: Polar stereographic projection showing Jupiter's 
+%            south pole in the center and its equator at the edge. 
+%            The map was constructed from images taken by the Cassini spacecraft 
+%            in December 2000 as it passed Jupiter on its way to Saturn 
+%            (Image courtesy NASA/JPL/Space Science Institute).
+%            Bottom panel: Saturn displaying aurora, photographed by the Hubble Space Telesope 
+%            on 28 January 2004 
+%            (Image courtesy of NASA, ESA, J. Clarke (Boston University), and Z. Levay (STScI)).} 
+%   \end{internallinenumbers}
+%   \label{fig:JupSat}
+%   \end{figure}
+
+ The discovery of electron precipitation associated with the aurora and the Earth's radiation belts have fueled much of the research within space physics and in particular, magnetospheric physics over the last 70 years. Microbursts are a common thread and have been hypothesized to explain the loss of the radiation belts during geomagnetic storms as well as small scale features in the diffuse and pulsating aurora \citep[e.g.][and refrences therein]{Lorentzen2001, Miyoshi2015, Greeley2019}. Obtaining a better understanding of radiation belt and auroral dynamics may eventually lead to improvements in space weather tools and analysis. Specifically, if microbursts play a large role in radiation belt dynamics or energy deposition into the ionosphere and upper atmosphere, understanding their impact and occurrence will become important. However, in the near term, understanding the microphysics of microbursts and their wave-particle interactions will improve our fundamental understanding of some of the potentially dominate mechanisms controlling the dynamics of the radiation belt and aurora. 
+
+The relatively new ability of flying constellations of LEO CubeSats have also helped to identify a similar phenomenon to microbursts. Curtains are similar in scale size of microbursts but have some clear characteristic differences as will be outlined within Section 1.2 \citep[][]{Blake2016}. Little research has been completed on Curtains. The current identification of their characteristics suggests that they may have a similar source, however outstanding issues still persist. 
+
+\subsection{Initial balloon observation of microbursts:}
+
+Since the start of balloon observations of 'auroral' precipitation, microbursts have fascinated researchers and provided a potential explanation for energy loss into the upper atmosphere. One of the first observations of microbursts were observed with the energetic electron precipitation (>40 keV) during a geomagnetic storm on September 25th, 1961 \citep{Winckler1962}. \citet{Winckler1962} reported a new result of observations of bursts in the 0.1 - 0.2 second range. 
+
+Shortly after, \citet{Anderson1964} looked statistically at these sub-second precipitation events and started to catalog their characteristics. Within \citet{Anderson1964}, microbursts are defined as a burst of X-rays from auroral regions of about 0.25 second duration. They also noted that when patches of microbursts were observed, they were observed for about 1.5 hours at a time with the frequency of the bursts increasing to about 1 per second before weakening and decaying back into the background noise. These patches were observed during daylight hours but most often in the dawn regions. Microbursts were found to primarily occur in trains, multiple peaks separated by $\sim$ 1second without changing characteristics. \citet{Parks1965} also confirmed these results, further suggesting that these trains were due to bouncing packets of electrons. While \citet{Anderson1964} saw many microbursts occurring within these patches and/or trains, there were some microbursts which were identified at times on their own. Often the microbursts were found to be superposed on top of smooth background X-ray flux. During these events, the microburst intensity was found to significantly enhance the counting rate when averaged over longer periods of time. \citet{Anderson1964} found that the energy spectrum of the microbursts was harder (more energetic) than the background precipitation. However, this was later contradicted by \citet{Hudson1965} where they determined that the energy spectrum of the microbursts were similar to that of the background energetic electron precipitation. \citet{Anderson1964} also reported that the energy spectra was observed to change throughout the event with a higher characteristic energy at the start of the microburst.  Many of these attributes have been found to hold with recent observations and studies of microbursts from similar balloon missions such at BARREL \citep[e.g.][]{Woodger2015, Anderson2017}. 
+
+In order to help determine the spatial scale size of a microburst, \citet{Parks1967} launched a balloon with four narrowly collimated X-ray detectors. During the balloon flight approximately 1400 microbursts were observed with similar features to those observed by \citet{Anderson1964}. Parks found that the region of interaction in the upper atmosphere ($\sim $80 - 110 km altitude) for the individual microburst was around 40 km $\pm$14 km. It was clear that for some events, this distance was smaller. Parks also suggested that microbursts are a result of a plasma instability which may initially be triggered by an electromagnetic wave. He did not see a time displacement of the high and low energy electron arrivals so concluded that the source must be local and the interaction instantaneous. 
+
+
+\subsection{In situ observations of microbursts}
+Soon after the initial microbursts observations from balloons, rocket and satellite measurements were used to determine the source of the microbursts phenomena. \citet{Lampton1967} launched a rocket with a pair of plastic phosphor scintillation counters. Each scintillator was oriented to view the precipitating electrons in the parallel and perpendicular direction to the rocket spin axis with three energy channels between $\sim$ 60 - 300 keV. During the September 17, 1965 flight the rocket reached an altitude around 160 km. Using the two detectors, \citet{Lampton1967} was able to determine that the pitch angle distribution was strongly peaked at the local 90 degree. They note that prompt appearance of the microbursts signatures at a large range of energies suggests that their source is local and synchronous. They also determined that for the weak microbursts observed during the flight, which did show energy dispersion, must have initiated a a much further distance away. The weaker microbursts were thought to have potentially bounced at least once along a closed field line. These results are consistent with more recent observations discussed below \citep[e.g.][]{Shumko2018a}.  
+
+\citet{Milton1967} attempted to gather simultaneous results from stratospheric balloons and INJUN 3. During the near conjugate pass the balloon and satellite were separated in longitude by less than 550 km. The balloon was at an altitude of 35 km and the satellite 2350 km. During this study, no simultaneous measurements of microbursts were able to be confirmed. However, there was a correlation found between the two platforms for longer period precipitation phenomena. Similar studies have since been completed to further constrain both the size of a single microbursts as well as the larger region of precipitation \citet{Milton1967, Breneman2015, Halford2015, Anderson2017, Clilverd2017} stated that their lack of one-to-one correspondence of microburst observations is perhaps not unexpected as \citet{Parks1967} had previously found that the source region of a microburst is approximately 20 km at the expected loss height of 80 km. 
+
+\citet{Oliven1968} used INJUN 3 VLF records to show the simultaneous occurrence of chorus waves and microbursts. They note that chorus waves were often observed in the dawn and pre-noon sector\citep{Oliven1968}. They determined that for all microbursts episodes that they observed, VLF chorus emissions were present. However, they were not able to show a one-to-one, burst-to-burst correlation between an individual microburst and a specific chorus burst. However, they concluded that the chorus waves and microbursts must have a similar origin.
+
+
+During the following decade many more observations of microbursts were collected and ultimately compiled by \citet[][and references therein]{Parks1978}.  
+\begin{itemize}
+\item Duration of microbursts - 0.1 - 0.6 seconds with 85\% occurring with a duration of 0.1 - 0.3 seconds.
+\item Microbursts occur individually, in pairs, and in trains with a quasi periodicity of $\sim$ 0.6 seconds.
+\item Microbursts are often superposed on 5 - 15 second periodic X-ray pulsations.
+\item Rocket experiments show a substructure on the order of 10 ms.
+\item In situ satellite data show microbursts occurring within all pitch angles. 
+\item Microburst are primarily observed between $\sim$ 0600 - 1800 MLT.
+\item Patches of microbursts can be observed over a few-MLT hour region. 
+\item Individual microbursts are highly localized, 10s km at the loss height. 
+\item not yet confirmed if microbursts or patches of microbursts drift from west to east as suggested in \citet{Parks1967}
+\item Microbursts do not affect strongly the observed pitch angle distribution.  
+\item The energy spectra of microbursts often agree with the energy spectra of the background precipitation. (Typical characteristic energy of $\sim$ 30 keV)
+\item The higher energy electrons within the microburst were found to arrive slightly ahead of the lower energies suggesting energy dispersion from a bouncing packet. 
+\item A strong correlation between microbursts and VLF waves, specifically rising tone chorus waves, have been identified. 
+\item Microburst activity increases during substorms. 
+\end{itemize}
+
+\noindent Many of these findings continue to hold today with more recent balloon and in situ observations. 
+
+As more satellites were launched, and higher energy ranges were observed, there appeared to be two populations of microbursts, energetic electron and relativistic electron microbursts. These two different populations have potentially different impacts within the radiation belt and ultimately space weather impacts. \textcolor{green}{Do we want to say anything here about loss of the source population and the different impacts. The lower energy electrons may have a larger impact on the ionosphere vs the relativistic stuff???? } \citet{Obrien2004} looked at whether microbursts in the recovery phase resulted in less electron loss from microbursts occurring during the main phase. Specifically, and unlike the previous studies mentioned which were considering 10s keV electron precipitation during a microburst, \citet{Obrien2004} were focusing on MeV microbursts. It should be noted that while MeV microbursts have been observed in situ, they are extremely rare (1 reported incident by the GRIPS team known by this author at the time of writing) within the atmosphere. They found that it was possible for microbursts to account for the loss of the radiation belts during the main phase. Each of the periods of strong microbursts activity, and thus loss, were accompanied by substorm and storm time injections. These results, and others cited within \citet{Obrien2004}, also suggest that chorus (non-linear) wave-particle interactions are the driver of relativistic microbursts. 
+
+CubeSats have greatly expanded the ability to study energetic electron precipitation \citep[e.g.][]{Crew2016}. This low cost access to space has provided the opportunity to regularly observe microbursts from multiple in situ platforms. FIREBIRD-II was one of the first CubeSats to look at energetic electron precipitation and specifically microbursts \citep{Crew2016}.  \citet{Shumko2018a} looked at an event which initially looks like a series of microburst and determined that it corresponded to a bouncing packet of electrons. As time increased, the higher energy electrons were found to arrive first. This suggest that while some electrons were lost to the atmosphere, another population remained trapped. Using the two CubeSats, they were able to constrain the size of the microburst showing that at the height of the satellite the latitudinal distance was ~ 29 +/- 1 km and longitudinal distance of 51 +/- 1 km. This results agrees incredibly well with previous observations \citep[e.g.][and references therein]{Parks1967, Lampton1967, Milton1967, Parks1978}. 
+
+
+Perhaps one of the closest modern day observations of whistler mode waves and microbursts are from \citet{Breneman2017} who considered VLF waves from Van Allen and Microbursts identified at FIREBIRD-II. As discussed above, INJUN3 observed both chorus waves and microbursts, but were not within the generation region of the chorus waves. Much of the mapping uncertainty within the \citet{Breneman2017} comes from mapping FIREBIRD-II to the magnetic equator. It is estimated that the difference in MLT between Van Allen and FIREBIRD-II was 0.03 hours or about 280 km at an L= 5.6. The transverse or L/latitudinal difference is thought to have ranged from 500 km to 60 km. These distance is similar to the spatial scale size of a chorus wave and the gyroradius of the resonant electrons. The microbursts showed no energy dispersion suggesting that the source was relatively local and were scattered strongly into the loss cone. \citet{Breneman2017} determined that the scattering must have been through a non-linear process. The microbursts were observed within the FIREBIRD-II energy channels ranging from 220-985 keV also suggesting that the lower band chorus causes a continuum of microbursts from sub-relativistic to relativistic. 
+
+A similar event using Van Allen Probes and AC6 was discussed in \citet{Mozer2018}. While \citet{Mozer2018} agreed that the large amplitude microburst pulses would require a non-linear process, when considered 1 second or larger averaged low-altitude electron fluxes, the quasi linear diffusion approximation is sufficient. If microbursts are a significant loss to the radiation belts, being able to model the loss with quasi linear diffusion will ease computational issues. 
+
+
+Throughout much of the last 70 years, instrumentation to look for microbursts within the equatorial regions have not existed. It is exceedingly difficult to resolve the loss cone at the magnetic equator. However, \citet{Shumko2018b} were able to observe what appears to be a microbursts on March 31 2017 from the Van Allen Probes. The characteristic energy of the microbursts were between 25 and 35 keV with an upper limit of 92 keV. The duration of these events was 0.15 - 0.5 seconds and had a clear lack of energy dispersion, suggesting the source mechanism was local. A chorus wave was observed at the same location and they were able to determine that quasi-linear wave-particle interactions were not sufficient to describe the observations. Thus, the observations at the magnetic equator - assumed to be within the generation region - suggest that non-linear interactions may be necessary to generate microbursts, agreeing with the result of \citet{Breneman2017}. 
+
+
+
+\subsection{A new phenomena?: Curtains}
+\citet{Blake2016} found a similar type of phenomena to microbursts. Prior to this point many in situ microburst studies used observations from a single satellite. This has made differentiating between spatial and temporal features difficult. \citet{Blake2016} found relatively consistent regions of larger scale precipitation with what initially appeared to be fine scale structure, with a similar spatial scale size to microbursts but lasting longer and thus categorized as precipiation bands \citep[e.g.][and references therein]{Greeley2019}, riding on top. Both the larger regions of what appears to be precipitation and the fine scale structure are observed to last for minutes and be extended in longitude (or MLT). One suggestion is that this extended longitudinal but latitudinally confined structure is a series of drifting microbursts. Interestingly, the fine scale structure appears to remain consistent with a lack of strong energy dispersion (which in a large integrated energy channel would show up as a widening of the temporal structure with time). Some have theorized that these curtains and the microbursts may have the same generation mechanism and that the curtains are just the drifting remains of the microbursts. However, if this were the case, clear energy dispersion, such as that seen in the bouncing packets of electrons from individual microbursts, should be seen to evolve over time.  
+
+
+
+
+
+
+\subsection{Wave-particle modeling of chorus and microbursts}
+
+Previous work to model the potential wave-particle interactions generating microbursts have been performed. (Hikishima, Omura, \& Summers, 2010) used a self-consistent full particle simulation to show that the low energy microbursts (10 - 100 keV) may be caused by discrete bursts of chorus wave emissions. They assume that the chorus wave generation region is at the magnetic equator and use a relatively low temperature anisotropy, A = 1.1. However, their simulation generates quite large chorus wave amplitudes of 4.8 nT which would impact the strength of the wave-particle interactions leading to a higher flux of particle precipitation or acceleration within their simulations. 
+
+(Hikishima, Omura, \& Summers, 2010)?s simulations showed a one-to-one correspondence between electron microbursts with energies between 10 - 100 keV electrons and the generation of discrete chorus elements. Throughout the simulation time (Hikishima, Omura, \& Summers, 2010) found that the precipitating electron energies slowly decrease. This may in part be due to electrons with lower parallel velocities decreasing with the increasing wave frequencies of the rising tone chorus. The wave-particle interactions cause changes to the anisotropy and thus wave growth and wave characteristics. This leads to potential differences in the precipitation expected to be observed in the northern and southern hemisphere. Of course, the wave-particle interactions described in (Hikishima, Omura, \& Summers, 2010) are not the only potential sources of microbursts or causes of electron precipitation (e.g. interactions at higher altitudes) within this energy range. 
+
+
+
+\subsection{Scale size and characteristics of chorus waves}
+
+Thus far we have shown a growing about of evidence that microbursts are generated by wave-particle interactions with chorus waves. The scale sizes and temporal features of microbursts should then compare to those of chorus waves. (Agapitov, Blum, Mozer, Bonnell, \& Wygant, 2017) completed a survey of 
+
+\section{Conclusions}
+
+   \begin{enumerate}
+      \item Microbursts have historically, and recently been shown to theoretically and observationally correlate strongly with chorus wave activity
+      \item Curtains have many similar spatial characteristics to Microbursts
+      \item Curtains contain many puzzling attributes including a lack of clear energy dispersion suggesting that they are not generated from a single incident of wave-particle interactions such as suggested with microbursts and rising tone chorus waves. 
+   \end{enumerate}
+
+\begin{acknowledgements}
+***** Include acknowledgements here ****** 
+\end{acknowledgements}
+
+%%    This version assumes use of bibtex with the swsc.bib file being present
+%%    If your bib file has a different name you need to change the following line
+
+\bibliography{swsc}
+   
+\end{linenumbers}
+
+\end{document}
+%_____________________________________________________________
+%                                             Simple A&A Table
+%_____________________________________________________________
+%
+\begin{table}
+\caption{Nonlinear Model Results}             % title of Table
+\label{table:1}      % is used to refer this table in the text
+\centering                          % used for centering table
+\begin{tabular}{c c c c}        % centered columns (4 columns)
+\hline\hline                 % inserts double horizontal lines
+HJD & $E$ & Method\#2 & Method\#3 \\    % table heading 
+\hline                        % inserts single horizontal line
+   1 & 50 & $-837$ & 970 \\      % inserting body of the table
+   2 & 47 & 877    & 230 \\
+   3 & 31 & 25     & 415 \\
+   4 & 35 & 144    & 2356 \\
+   5 & 45 & 300    & 556 \\ 
+\hline                                   %inserts single line
+\end{tabular}
+\end{table}
+%
